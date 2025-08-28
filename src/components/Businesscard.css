@@ -1,0 +1,180 @@
+
+:root {
+  /* Light Mode Colors */
+  --light-bg: #e9ecef;
+  --light-card-bg: #ffffff;
+  --light-text-primary: #212529;
+  --light-text-secondary: #495057;
+  --light-text-title: #0077b6;
+  --light-btn-email-bg: #f8f9fa;
+  --light-btn-email-border: #dee2e6;
+  --light-btn-email-text: #212529;
+
+  /* Dark Mode Colors */
+  --dark-bg: #121212;
+  --dark-card-bg: #1e1e1e;
+  --dark-text-primary: #e0e0e0;
+  --dark-text-secondary: #a0a0a0;
+  --dark-text-title: #90e0ef;
+  --dark-btn-email-bg: #333333;
+  --dark-btn-email-border: #444444;
+  --dark-btn-email-text: #e0e0e0;
+
+  /* Shared Colors */
+  --btn-linkedin-bg: #0077b6;
+  --btn-linkedin-text: #ffffff;
+}
+
+/* --- Theme Application --- */
+.light-mode {
+  --bg-color: var(--light-bg);
+  --card-bg-color: var(--light-card-bg);
+  --text-primary: var(--light-text-primary);
+  --text-secondary: var(--light-text-secondary);
+  --text-title: var(--light-text-title);
+  --btn-email-bg: var(--light-btn-email-bg);
+  --btn-email-border: var(--light-btn-email-border);
+  --btn-email-text: var(--light-btn-email-text);
+}
+
+.dark-mode {
+  --bg-color: var(--dark-bg);
+  --card-bg-color: var(--dark-card-bg);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --text-title: var(--dark-text-title);
+  --btn-email-bg: var(--dark-btn-email-bg);
+  --btn-email-border: var(--dark-btn-email-border);
+  --btn-email-text: var(--dark-btn-email-text);
+}
+
+/* --- Main Container & Card Styling --- */
+.business-card-container {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.business-card {
+  background-color: var(--card-bg-color);
+  max-width: 350px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Content Styling --- */
+.card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-name {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.card-title {
+  color: var(--text-title);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+.card-website {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* --- Buttons --- */
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-email {
+  background-color: var(--btn-email-bg);
+  color: var(--btn-email-text);
+  border: 1px solid var(--btn-email-border);
+}
+
+.btn-linkedin {
+  background-color: var(--btn-linkedin-bg);
+  color: var(--btn-linkedin-text);
+  border: none;
+}
+
+/* --- About & Interests Sections --- */
+.card-section {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.card-section h3 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.card-section p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* --- Theme Toggle Button --- */
+.theme-toggle-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--text-secondary);
+  background-color: var(--card-bg-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--text-primary);
+  color: var(--card-bg-color);
+  border-color: var(--text-primary);
+}

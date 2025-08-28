@@ -1,7 +1,7 @@
 
 
 import React, { useState } from 'react';
-import './BusinessCard.css'; // We will create this file next
+import './Businesscard.css'; // We will create this file next
 import profilePic from '../assets/profile.png'; // Make sure to have an image in src/assets
 
 // You can create an 'assets' folder inside 'src' for your images
