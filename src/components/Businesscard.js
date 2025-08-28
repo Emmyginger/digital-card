@@ -1,11 +1,10 @@
 
 
 import React, { useState } from 'react';
-import './Businesscard.css'; // We will create this file next
-import profilePic from '../assets/profile.png'; // Make sure to have an image in src/assets
+import './Businesscard.css'; 
+import profilePic from '../assets/profile.png'; 
 
-// You can create an 'assets' folder inside 'src' for your images
-// For example: src/assets/laura-smith.png
+
 
 const BusinessCard = () => {
   // State to manage the current theme, defaulting to 'light'
@@ -39,17 +38,16 @@ const BusinessCard = () => {
           <div className="card-section">
             <h3>About</h3>
             <p>
-              I am a frontend developer with a particular interest in making things
-              simple and automating daily tasks. I try to keep up with security
-              and best practices, and am always looking for new things to learn.
+              I am a Frontend web developer with good problem solving skills
+               and I make sure to pay attention to detail so that the best result can be achieved
             </p>
           </div>
 
           <div className="card-section">
             <h3>Interests</h3>
             <p>
-              Food expert. Music scholar. Reader. Internet fanatic. Bacon buff.
-              Entrepreneur. Travel geek. Pop culture ninja. Coffee fanatic.
+                Reader. Internet fanatic. Sports enthusiast.
+                Entrepreneur. Travel geek. 
             </p>
           </div>
         </div>

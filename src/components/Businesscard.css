@@ -115,6 +115,9 @@
   transition: color 0.3s ease;
   text-decoration: none;
 }
+.card-website:hover{
+    color:var(--text-title);
+}
 
 /* --- Buttons --- */
 .card-buttons {
