@@ -25,7 +25,7 @@ const BusinessCard = () => {
         <div className="card-content">
           <h1 className="card-name">Israel Orizu</h1>
           <h2 className="card-title">Frontend Developer</h2>
-          <p className="card-website">laurasmith.website</p>
+          <a href='https://github.com/Emmyginger' className="card-website">Check out my profile on Github </a>
 
           <div className="card-buttons">
             <a href="mailto:israelorizu@gmail.com" className="btn btn-email">

@@ -9,6 +9,8 @@
   --light-btn-email-bg: #f8f9fa;
   --light-btn-email-border: #dee2e6;
   --light-btn-email-text: #212529;
+  --light-bg-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
 
   /* Dark Mode Colors */
   --dark-bg: #121212;
@@ -19,6 +21,7 @@
   --dark-btn-email-bg: #333333;
   --dark-btn-email-border: #444444;
   --dark-btn-email-text: #e0e0e0;
+  --dark-bg-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 
   /* Shared Colors */
   --btn-linkedin-bg: #0077b6;
@@ -35,6 +38,7 @@
   --btn-email-bg: var(--light-btn-email-bg);
   --btn-email-border: var(--light-btn-email-border);
   --btn-email-text: var(--light-btn-email-text);
+  --current-bg-image: var(--light-bg-image);
 }
 
 .dark-mode {
@@ -46,11 +50,17 @@
   --btn-email-bg: var(--dark-btn-email-bg);
   --btn-email-border: var(--dark-btn-email-border);
   --btn-email-text: var(--dark-btn-email-text);
+  --current-bg-image: var(--dark-bg-image);
 }
 
 /* --- Main Container & Card Styling --- */
 .business-card-container {
-  background-color: var(--bg-color);
+  background-image: var(--current-bg-image);
+  background-color: var(--bg-color); /* Fallback color */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps background fixed when scrolling */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -58,7 +68,7 @@
   align-items: center;
   padding: 2rem;
   font-family: 'Inter', sans-serif;
-  transition: background-color 0.3s ease;
+  transition: background-image 0.5s ease-in-out, background-color 0.3s ease; /* Added transition for image */
 }
 
 .business-card {
@@ -103,6 +113,7 @@
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 /* --- Buttons --- */
@@ -111,6 +122,7 @@
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 .btn {
